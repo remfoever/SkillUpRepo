@@ -6,8 +6,6 @@
 
 地域选择自己云服务器所在地区就行，私有读写，服务端加密
 
-![image-20250224211446807](%E8%85%BE%E8%AE%AF%E4%BA%91+PicGo.assets/image-20250224211446807.png)
-
 ![image-20250224214245123](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224214245123.png)
 
 ![image-20250224214339957](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224214339957.png)
@@ -23,8 +21,6 @@
 官网链接:https://link.zhihu.com/?target=https%3A//picgo.github.io/PicGo-Doc/
 
 安装包链接:https://link.zhihu.com/?target=https%3A//github.com/Molunerfinn/PicGo/releases
-
-![image-20250224212708117](%E8%85%BE%E8%AE%AF%E4%BA%91+PicGo.assets/image-20250224212708117.png)
 
 如果还有其他问题，可以参考官方问题总结：
 
