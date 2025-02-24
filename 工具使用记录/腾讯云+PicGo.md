@@ -8,15 +8,15 @@
 
 ![image-20250224211446807](%E8%85%BE%E8%AE%AF%E4%BA%91+PicGo.assets/image-20250224211446807.png)
 
-![image-20250224214245123](C:\Users\25794\AppData\Roaming\Typora\typora-user-images\image-20250224214245123.png)
+![image-20250224214245123](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224214245123.png)
 
-![image-20250224214339957](C:\Users\25794\AppData\Roaming\Typora\typora-user-images\image-20250224214339957.png)
+![image-20250224214339957](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224214339957.png)
 
-![image-20250224214403672](C:\Users\25794\AppData\Roaming\Typora\typora-user-images\image-20250224214403672.png)
+![image-20250224214403672](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224214403672.png)
 
 创建完成后点击存储桶，文件列表，创建文件夹(请记住文件夹,等下pigGO配置需要用到)：
 
-![image-20250224214455011](C:\Users\25794\AppData\Roaming\Typora\typora-user-images\image-20250224214455011.png)
+![image-20250224214455011](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224214455011.png)
 
 ## 2.下载PicGo：
 
@@ -33,8 +33,6 @@
 
 
 ## 3.安装完成后，打开PicGo设置：
-
-![image-20250224212836114](%E8%85%BE%E8%AE%AF%E4%BA%91+PicGo.assets/image-20250224212836114.png)
 
 ![image-20250224212911495](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224212911495.png)
 
@@ -70,9 +68,7 @@
 
 ## 4.Typora设置
 
-![image-20250224214117727](https://md-assets-1344593885.cos.ap-beijing.myqcloud.com/image-20250224214117727.png)
-
-
+![image-20250224220901212](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224220901212.png)
 
 
 
