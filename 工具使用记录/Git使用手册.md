@@ -334,3 +334,59 @@ git checkout -- .
 
 
 
+
+
+
+
+
+
+
+
+### 1. 创建并切换到新的 `personal/cuijingtao/cam_ip` 分支
+
+使用以下命令创建并切换到新分支：
+
+bash
+
+复制
+
+```
+git checkout -b personal/cuijingtao/cam_ip
+```
+
+### 2. 推送新分支到远程仓库
+
+创建并切换到新分支后，将其推送到远程仓库：
+
+bash
+
+复制
+
+```
+git push -u origin personal/cuijingtao/cam_ip
+```
+
+### 3. 确认分支创建成功
+
+使用以下命令查看所有分支，确认新分支已成功创建并推送到远程仓库：
+
+bash
+
+复制
+
+```
+git branch -a
+```
+
+你应该能在输出中看到 `remotes/origin/personal/cuijingtao/cam_ip`，表示分支已成功创建并推送。
+
+### 总结
+
+- 创建并切换到新分支：`git checkout -b personal/cuijingtao/cam_ip`
+- 推送分支到远程仓库：`git push -u origin personal/cuijingtao/cam_ip`
+- 确认分支创建成功：`git branch -a`
+
+希望这些步骤能帮助你成功创建并管理你的 `personal/cuijingtao/cam_ip` 分支！
+
+
+
