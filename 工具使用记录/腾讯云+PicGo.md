@@ -50,10 +50,8 @@
 
 ![image-20250224213246113](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224213246113.png)
 
-SecretId:AKIDlPq57wkLjuscAC9wXv8D6mGZfbQ5kEYf 
 
-SecretKey:zoTxGOJ3czGLGzZyBByYv64pMfuZ8iMw
-
+>>>>>>> b489e89624a3ea32b3d8cc6d87033804bb09c7c6
 ![image-20250224214647694](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250224214647694.png)
 
 设定Bucket:picture
