@@ -64,6 +64,8 @@
 | soft             | 5    | Software system reset. Write to RESET_CTRL [soft_reset].     |
 | debug_sys        | 6    | Software debugger reset. Write to BLOCKONLY_RST [debug_only]. |
 
+![image-20250331104302959](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331104302959.png)
+
 这里软件复位只需要关注`[soft]`和`[psonly_reset_req]`两种方式。这两种方式都是属于`Internal SRST`，通过`Register write`进行复位
 
 | 寄存器名称                             | 复位原因           | 备注 |
@@ -207,6 +209,28 @@ PS与PL通过AXI总线通信，突然复位PS可能导致：
 
 
 
+## 复位寄存器
+
+![image-20250331103050842](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331103050842.png)
+
+![image-20250331103208452](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331103208452.png)
+
+
+
+
+
+
+
+![image-20250331104821743](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331104821743.png)
+
+
+
+
+
+![image-20250331182055928](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331182055928.png)
+
+
+
 
 
 
@@ -222,6 +246,151 @@ PS与PL通过AXI总线通信，突然复位PS可能导致：
 ## RPU Reset Sequence  
 
 待补充
+
+
+
+
+
+
+
+## 单核复位描述(ug1085-P61)
+
+每个APU内核均可独立复位。APU MPCore复位可由FPD系统看门狗定时器（FPD_SWDT）或软件寄存器写入触发。但需注意，APU复位时不会优雅终止其收发请求。FPD系统复位（FPD_SRST）用于FPD系统发生严重故障的情况，而APU复位主要用于软件调试。
+
+软件生成复位的编程步骤：
+
+1. 在PMU中使能复位请求中断：向PMU_GLOBAL.REQ_SWRST_INT_EN寄存器的[APUx]位（一个或多个）写入1。
+2. 触发中断请求：向REQ_SWRST_TRIG寄存器的[APU{0:3}]位（一个或多个）写入1。
+
+
+
+
+
+
+
+## 重置服务(Reset Services)
+
+通过配置**REQ_SWRST_TRIG寄存器**可对各个模块进行复位操作，但前提是**REQ_SWRST_INT_MASK寄存器**中已解除对应复位的屏蔽中断
+
+### **复位请求列表(ug1085-P139)**
+
+![image-20250331133203738](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331133203738.png)
+
+![image-20250331135457823](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331135457823.png)
+
+
+
+### REQ_SWRST_INT_EN寄存器
+
+![image-20250331145151883](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331145151883.png)
+
+![image-20250331145210676](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331145210676.png)
+
+
+
+
+
+
+
+
+
+
+
+### REQ_SWRST_TRIG寄存器
+
+![image-20250331114539016](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331114539016.png)
+
+![image-20250331114552485](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331114552485.png)
+
+### REQ_SWRST_INT_MASK寄存器
+
+![image-20250331131959822](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331131959822.png)
+
+![image-20250331132711037](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331132711037.png)
+
+### RST_FPD_APU(CRF_APB)寄存器
+
+![image-20250331133939029](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331133939029.png)
+
+
+
+### REQ_SWRST_STATUS(PMU_GLOBAL)寄存器
+
+![image-20250331134921365](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331134921365.png)
+
+![image-20250331135033387](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331135033387.png)
+
+
+
+### REQ_SWRST_INT_EN(PMU_GLOBAL)寄存器
+
+![image-20250331135156828](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331135156828.png)
+
+![image-20250331135214698](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250331135214698.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
