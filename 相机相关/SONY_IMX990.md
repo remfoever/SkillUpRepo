@@ -231,7 +231,7 @@ The output area of the PG pattern is the effective area of each mod
     *   **水平起点**：是SAV（Start of Active Video）第4个像素的下一个像素。
         
     *   **垂直起点**：是帧信息行的下一行。
-        
+    
 *   **例子**：假设SAV的第4个像素位于水平位置100，那么水平起点就是第101个像素。如果帧信息行位于垂直位置10，那么垂直起点就是第11行。这意味着输出区域的左上角将从第101列和第11行开始。
     
 
@@ -244,7 +244,7 @@ The output area of the PG pattern is the effective area of each mod
     *   **设置PGDATA2（模式4, 5）**：背景由PGDATA2寄存器设置（可以自定义背景颜色或模式）。
         
     *   **Through（成像数据）**：背景直接通过成像数据（即使用实际捕捉的图像数据作为背景）。
-        
+    
 *   **例子**：如果你选择“固定0h”，那么输出区域之外的背景将是黑色。如果你选择“设置PGDATA2”，你可以将背景设置为特定的颜色或图案。如果你选择“Through”，那么背景将是实际捕捉的图像数据。
     
 
@@ -296,3 +296,44 @@ The output area of the PG pattern is the effective area of each mod
 ![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/eYVOLXa7LrZwOpz2/img/10ce54ac-31bf-4656-b38b-c37118184106.png)
 
 # VMAX参数设置
+
+![image-20250409092850617](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250409092850617.png)
+
+这个里面有个参数       VMAC                42C       1068    列   很重要   为什么是1068 ？
+
+​     ![image-20250409093041077](https://picture-1344593885.cos.ap-beijing.myqcloud.com/image-20250409093041077.png)
+
+这里GTWAIT = 6      GSDLY = 4      
+
+1024 + 4 + 4 = 1032
+
+2 + 12 + 8 + 1 + 3 = 26
+
+1032 + 26 = 1058 + 10
+
+26 + 4 + 4 + 6 + 4 = 44      
+
+也就是说，每次的Effective marge都要必须加上 
+
+在使用ROI模式的时候  裁剪的列数  +  44（2Ch）才能正常输出，否则画幅不对
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
